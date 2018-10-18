@@ -1,17 +1,19 @@
 
 function changeBoxColors(color) {
   console.log('Selected color: ' + color);
-  // TODO: Look at styles.css and choose a class
-  // to apply to all of the box elements in order
-  // to change their background color
-  // possible values of color are: 'red', 'blue', 'yellow'
-  // (consider using a switch statement!)
+var a = document.getElementsByClassName("box");
+for (var i = 0; i < a.length; i++ ){
+  a[i].style.backgroundColor = color;
+}
 }
 
 function addBox() {
   console.log('Adding a new box');
   // TODO: Add a new div with class="box" to
   // the boxes section of the dom tree
+var div =document.createElement('div');
+document.getElementById('boxes').appendChild(div);
+div.className = 'box';
 
   var newBoxElement = null; // replace with your code
   // This line is needed to make sure that new boxes
